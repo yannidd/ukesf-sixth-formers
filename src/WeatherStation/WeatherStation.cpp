@@ -1,6 +1,6 @@
 #include "WeatherStation/WeatherStation.h"
 
-#include <U8x8lib.h>
+#include "../Display/u8x8/U8x8lib.h"
 
 void WeatherStation::begin() {
   u8x8.begin();

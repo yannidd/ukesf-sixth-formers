@@ -1,7 +1,7 @@
 #ifndef UKESF_SIXTH_FORMERS_WEATHER_STATION_H_
 #define UKESF_SIXTH_FORMERS_WEATHER_STATION_H_
 
-#include <U8x8lib.h>
+#include "../Display/u8x8/U8x8lib.h"
 
 class WeatherStation {
  private:

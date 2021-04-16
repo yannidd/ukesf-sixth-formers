@@ -1,31 +1,24 @@
 #include <UkesfSixthFormers.h>
 
-#include "DHT.h"
-#include "Seeed_BMP280.h"
-
-#define DHTPIN 3       // what pin we're connected to
-#define DHTTYPE DHT11  // DHT 11
-DHT dht(DHTPIN, DHTTYPE);
-BMP280 bmp280;
-
+Barometer barometer;
+Hygrometer hygrometer;
+Thermometer thermometer;
 WeatherStation weatherStation;
 
 void setup(void) {
+  barometer.begin();
+  hygrometer.begin();
+  thermometer.begin();
   weatherStation.begin();
-  dht.begin();
-  if (!bmp280.init()) {
-    Serial.println("Device not connected or broken!");
-  }
 }
 
 void loop(void) {
-  float temp, humi;
-  temp = dht.readTemperature();
-  humi = dht.readHumidity();
-  float pressure = bmp280.getPressure() / 100.0;
+  float pressure = barometer.read();
+  float humidity = hygrometer.read();
+  float temperature = thermometer.read();
 
-  weatherStation.setTemperature(temp);
-  weatherStation.setHumidity(humi);
   weatherStation.setAirPressure(pressure);
+  weatherStation.setHumidity(humidity);
+  weatherStation.setTemperature(temperature);
   delay(10);
 }
