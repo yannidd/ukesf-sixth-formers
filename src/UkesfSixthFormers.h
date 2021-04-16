@@ -5,5 +5,6 @@
 #include "Accelerometer/Accelerometer.h"
 #include "Barometer/Barometer.h"
 #include "ThermometerHygrometer/ThermometerHygrometer.h"
+#include "Display/Display.h"
 
 #endif  // UKESF_SIXTH_FORMERS_H_
