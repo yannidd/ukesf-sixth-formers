@@ -1,8 +1,8 @@
-const int ledPin = 4;         // Define the LED pin;
+const int ledPin = 6;         // Define the LED pin;
 const float frequency = 0.5;  // Frequency [Hz] for soft-blinking.
 
 void setup() {
-  pinMode(ledPin, OUTPUT);  // Initialize LED_PIN as an output.
+  pinMode(ledPin, OUTPUT);  // Initialize ledPin as an output.
 }
 
 void loop() {

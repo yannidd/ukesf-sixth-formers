@@ -1,5 +1,5 @@
-const int ledPin = 4;
-const int buttonPin = 6;  // Define the switch pin.
+const int ledPin = 4;     // Define the LED pin.
+const int buttonPin = 6;  // Define the button pin.
 
 bool ledState;             // A bool to store the LED state.
 bool previousButtonState;  // A bool to store the previous button state.
@@ -7,7 +7,7 @@ bool currentButtonState;   // A bool to store the current button state.
 
 void setup() {
   pinMode(ledPin, OUTPUT);    // Initialize ledPin as an output.
-  pinMode(buttonPin, INPUT);  // Initialize switchPin as an input.
+  pinMode(buttonPin, INPUT);  // Initialize buttonPin as an input.
 }
 
 void loop() {
@@ -20,4 +20,5 @@ void loop() {
   }
 
   previousButtonState = currentButtonState;  // Current state becomes previous.
+  delay(10);
 }
