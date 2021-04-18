@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  float humidity = hygrometer.read();
+  float humidity = hygrometer.read(); // Read humidity [%].
   Serial.println(humidity);
   delay(10);
 }

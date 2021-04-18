@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  float temperature = thermometer.read();
+  float temperature = thermometer.read();  // Read temperature [C].
   Serial.println(temperature);
   delay(10);
 }

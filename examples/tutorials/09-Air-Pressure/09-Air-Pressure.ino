@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  float pressure = barometer.read();
+  float pressure = barometer.read();  // Read pressure [hPa].
   Serial.println(pressure);
   delay(10);
 }

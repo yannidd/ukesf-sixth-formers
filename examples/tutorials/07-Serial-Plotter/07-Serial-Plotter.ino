@@ -1,5 +1,5 @@
-const int potentiometerPin = 6;  // Define the potentiometer pin.
-const int lightSensorPin = 6;    // Define the light sensor pin.
+const int potentiometerPin = A0;  // Define the potentiometer pin.
+const int lightSensorPin = A6;    // Define the light sensor pin.
 
 void setup() {
   pinMode(potentiometerPin, INPUT);  // Initialize potentiometerPin as an input.
@@ -14,7 +14,7 @@ void loop() {
   // Send the readings to the computer in a space-separated format.
   Serial.print(potentiometerValue);
   Serial.print(" ");
-  Serial.println(-potentiometerValue);
+  Serial.println(lightSensorValue);
   // Wait for 100 milliseconds.
   delay(100);
 }
