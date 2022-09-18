@@ -1,20 +1,19 @@
-#ifndef UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_H_
-#define UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_H_
+#ifndef UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_DHT20_H_
+#define UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_DHT20_H_
 
-class Thermometer {
+#include <Adafruit_AHTX0.h>
+
+#define DHT11 11
+#define DHT20 20
+
+class DHTsensor {
  private:
+  uint8_t _type;
  public:
+  DHTsensor(uint8_t type);
   int begin();
-  float read();
+  float readTemperature();
+  float readHumidity();
 };
 
-class Hygrometer {
- private:
-  // DHT dht(3, DHT11);
-
- public:
-  int begin();
-  float read();
-};
-
-#endif  // UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_H_
+#endif  // UKESF_SIXTH_FORMERS_THERMOMETER_HYGROMETER_DHT20_H_
