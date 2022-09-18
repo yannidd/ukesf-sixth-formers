@@ -42,6 +42,6 @@ float DHTsensor::readHumidity(){
     return humiditySensor.relative_humidity; 
   }
   else if (_type == DHT11){
-    return DHT11_sensor.readTemperature();
+    return DHT11_sensor.readHumidity();
   }
 }
