@@ -1,10 +1,10 @@
 #include <UkesfSixthFormers.h>
 
-// TODO: Define the barometer, hygrometer, and thermometer here.
+// TODO: Define the barometer and temp & humidity sensor here.
 WeatherStation weatherStation;
 
 void setup(void) {
-  // TODO: Begin the barometer, hygrometer, and thermometer here.
+  // TODO: Begin the barometer and temp & humidity sensor here.
   weatherStation.begin();
 }
 

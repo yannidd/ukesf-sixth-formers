@@ -1,21 +1,24 @@
 #include <UkesfSixthFormers.h>
 
+//Temperature & Humidity Sensor
+//Change the value in the bracket below to:
+// --> DHT11 (if you have a blue sensor with a "D3" label on the Grove PCB)
+// --> DHT20 (if you have a black sensor with an "IIC" label on the Grove PCB)
+DHTsensor tempHumiditySensor(DHT20);
+
 Barometer barometer;
-Hygrometer hygrometer;
-Thermometer thermometer;
 WeatherStation weatherStation;
 
 void setup(void) {
   barometer.begin();
-  hygrometer.begin();
-  thermometer.begin();
+  tempHumiditySensor.begin();
   weatherStation.begin();
 }
 
 void loop(void) {
   float pressure = barometer.read();
-  float humidity = hygrometer.read();
-  float temperature = thermometer.read();
+  float humidity = tempHumiditySensor.readHumidity();
+  float temperature = tempHumiditySensor.readTemperature();
 
   weatherStation.setAirPressure(pressure);
   weatherStation.setHumidity(humidity);
